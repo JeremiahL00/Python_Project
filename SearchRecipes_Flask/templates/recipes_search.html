@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipes</title>
+</head>
+<body>
+<h3>Final Project</h3>
+<br>
+
+
+    <h1 class="center_header">Search for Recipes</h1>
+
+    <div class="search_form_style">
+        <form method="POST" action="{{url_for('search')}}">
+{#            {{form.csrf}}#}
+{#            {{form.hidden_tag()}}#}
+
+            <label>Meal:</label><br>
+            {{form.meal}}
+
+            <br><br>
+
+            <label>Include:</label><br>
+            {{form.include}}
+            <br><br>
+
+            <label>Exclude:</label><br>
+            {{form.exclude}}
+            <br><br>
+
+
+            <input type="submit" value="Search">
+             <a href="{{url_for('index')}}">Home</a>
+<a href="{{url_for('popularCocktails')}}">Popular Cocktails</a>
+<a href="{{url_for('latestCocktails')}}">Latest Cocktails</a>
+        </form>
+    </div>
+
+</body>
+</html>

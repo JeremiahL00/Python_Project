@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Latest Cocktails</title>
+</head>
+<body>
+
+ <table border="5">
+        <tr>
+            <th>Name</th><th>Image</th><th>ID</th><th>Instructions</th>
+        </tr>
+
+        {% for i in latest %}
+     <tr>
+         <td>{{ i[0] }}</td>
+         <td><img src="{{ i[1] }}" width="500" height="500"> </td>
+         <td>{{ i[2] }}</td>
+         <td>{{ i[3] }}</td>
+     </tr>
+        {% endfor %}
+
+</table>
+
+    <br><br>
+<a href="{{url_for('index')}}">Home</a>
+<a href="{{url_for('search')}}">Search for Recipes</a>
+<a href="{{url_for('popularCocktails')}}">Popular Cocktails</a>
+
+</body>
+</html>

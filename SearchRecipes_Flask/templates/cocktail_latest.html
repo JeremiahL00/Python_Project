@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Latest Cocktails</title>
+</head>
+<body>
+<h3>Final Project</h3>
+<br>
+
+
+    <h1 class="center_header">Latest Cocktails</h1>
+
+    <div class="search_form_style">
+        <form method="POST" action="{{url_for('latestCocktails')}}">
+{#            {{form.csrf}}#}
+{#            {{form.hidden_tag()}}#}
+
+            <br><br>
+
+            <label>Click to find the latest cocktails made:</label><br><br>
+            {{form.latest}}
+            <br><br>
+
+
+
+
+            <br>
+            <br>
+
+
+            <a href="{{url_for('index')}}">Home</a>
+            <a href="{{url_for('search')}}">Search For Recipes</a>
+<a href="{{url_for('popularCocktails')}}">Popular Cocktails</a>
+        </form>
+    </div>
+
+</body>
+</html>
